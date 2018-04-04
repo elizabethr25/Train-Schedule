@@ -1,0 +1,36 @@
+.jumbotron {
+    margin: 25px;
+}
+
+h1, #tagline {
+    text-align: center;
+}
+
+.schedule-panel {
+    margin: 25px;
+    background-color: lightgray;
+}
+
+.topic {
+    background-color: red; 
+}
+
+.panel-default {
+    margin: 25px;
+    padding: 10px;
+    background-color: lightblue;
+}
+
+.input-group {
+    width: 100%;
+}
+
+.input-header {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.form-control {
+    margin-bottom: 15px;
+}
+

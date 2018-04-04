@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+
+    <title>Train Schedule</title>
+
+</head>
+
+<body>
+
+    <div class="jumbotron">
+        <h1>Train Schedule</h1>
+        <p id="tagline">"Always" on time.</p>
+    </div>
+
+    <div class="schedule-panel">
+
+        <div class="panel-heading">Train Schedule</div>
+
+        <table class="table">
+            <th class="topic">Train Name</th>
+            <th class="topic">Destination</th>
+            <th class="topic">Frequency (min)</th>
+            <th class="topic">Next Arrival</th>
+            <th class="topic">Minutes Away</th>
+        </table>
+
+    </div>
+
+    <div class="panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">Add New Train</h3>
+        </div>
+
+        <div class="panel-body">
+
+            <div class="input-group" id="input-train-name">
+                <p class="input-header">Train Name</p>
+                <!-- <span class="input-group-addon" id="basic-addon1">Train Name</span> -->
+                <input type="text" class="form-control" placeholder="" aria-describedby="basic-addon1">
+            </div>
+
+            <div class="input-group" id="input-destination">
+                <p class="input-header">Destination</p>
+                <!-- <span class="input-group-addon" id="basic-addon1">Destination</span> -->
+                <input type="text" class="form-control" placeholder="" aria-describedby="basic-addon1">
+            </div>
+
+            <div class="input-group" id="input-frequency">
+                <p class="input-header">Frequency</p>
+                <!-- <span class="input-group-addon" id="basic-addon1">Frequency</span> -->
+                <input type="text" class="form-control" placeholder="" aria-describedby="basic-addon1">
+            </div>
+
+            <div class="input-group" id"input-first-train">
+                <p class="input-header">First Train Time</p>
+                    <!-- <span class="input-group-addon" id="basic-addon1">First Train</span> -->
+                    <input type="text" class="form-control" placeholder="Hh:Mm Military Time" aria-describedby="basic-addon1">
+                </div>
+
+        </div>
+
+        <button id="submit">Submit</button>
+
+    </div>
+
+</body>
+
+</html>
