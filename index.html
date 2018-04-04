@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
+    <!-- Firebase Referene  -->
+    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
     <link rel="stylesheet" type="text/css" href="style.css">
@@ -24,7 +27,7 @@
         <p id="tagline">"Always" on time.</p>
     </div>
 
-    <div class="schedule-panel">
+    <div class="panel panel-default" id="schedule-panel">
 
         <div class="panel-heading">Train Schedule</div>
 
@@ -38,7 +41,7 @@
 
     </div>
 
-    <div class="panel-default">
+    <div class="panel panel-default" id="add-new-train">
         <div class="panel-heading">
             <h3 class="panel-title">Add New Train</h3>
         </div>
@@ -71,9 +74,11 @@
 
         </div>
 
-        <button id="submit">Submit</button>
+        <button id="add-train-button">Submit</button>
 
     </div>
+
+<script src="logic.js"></script>
 
 </body>
 

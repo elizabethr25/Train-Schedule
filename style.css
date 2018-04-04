@@ -6,7 +6,7 @@ h1, #tagline {
     text-align: center;
 }
 
-.schedule-panel {
+#schedule-panel {
     margin: 25px;
     background-color: lightgray;
 }
@@ -34,3 +34,6 @@ h1, #tagline {
     margin-bottom: 15px;
 }
 
+.panel-heading {
+    background-color: lightgreen;
+}
