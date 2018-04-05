@@ -15,6 +15,10 @@ h1, #tagline {
     background-color: red; 
 }
 
+/* tr {
+    width: 100%;
+} */
+
 .panel-default {
     margin: 25px;
     padding: 10px;

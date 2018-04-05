@@ -22,7 +22,7 @@ $("#add-train-button").on("click", function(event){
     var trainInfo = $("#input-train-name").val().trim();
     var trainDestination = $("#input-destination").val().trim();
     var trainFrequency = $("#input-frequency").val().trim();
-    var firstTrainTime = moment($("#input-first-train").val(),"HH:mm").subtract(10, "years").format("X");
+    var firstTrainTime = moment($("#input-first-train").val(),"HH:mm").subtract(1, "years").format("X");
 
     //Create new local "temporary" object for holding train data (array)
 
@@ -72,6 +72,28 @@ $("#add-train-button").on("click", function(event){
         var firstTrainPretty = moment().diff(moment.unix(firstTrainTime,"X"), "minutes");
 
     //Calculate the next arrival
+    var tFrequency = trainFrequency;
+    var firstTime = firstTrainTime;
+
+    var firstTimeConverted = moment(firstTime, "HH:mm").subtract(1, "years");
+    console.log("First time converted:" + firstTimeConverted);
+
+    var currentTime = moment();
+    console.log("Current Time: " + moment(currentTime).format("hh:mm"));
+
+    var diffTime = moment().diff(moment(firstTimeConverted), "minutes");
+    console.log("DIFFERENCE IN TIME: " + diffTime);
+
+    var tRemainder = diffTime % tFrequency;
+    console.log(tRemainder);
+
+    var tMinutesTillTrain = tFrequency - tRemainder;
+    console.log("MINUTES TILL TRAIN: " + tMinutesTillTrain);
+
+    var nextTrain = moment().add(tMinutesTillTrain, "minutes");
+    console.log("ARRIVAL TIME: " + moment(nextTrain).format("hh:mm"));
+
+    
 
     //Calculate the minutes away
 
@@ -82,7 +104,12 @@ $("#add-train-button").on("click", function(event){
         "<td><td>" +
         trainDestination +
         "<td><td>" +
-        trainFrequency
+        trainFrequency +
+        "<td><td>" +
+        tMinutesTillTrain +
+        "<td><td>" +
+        nextTrain + 
+        "<td><tr>"
     );
 
 });
