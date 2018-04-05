@@ -11,8 +11,10 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
+    <!-- Stylesheet Reference -->
     <link rel="stylesheet" type="text/css" href="style.css">
 
+    <!-- Bootstrap Reference  -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
         crossorigin="anonymous">
 
@@ -32,25 +34,31 @@
 
     <div class="panel panel-default" id="schedule-panel">
 
-        <div class="panel-heading">Train Schedule</div>
+        <div class="panel-heading">
+            <h3 class="panel-title">Train Schedule</h3>
+        </div>
 
         <div class="panel-body">
-            <table class="table" id="train-table">
-                <thead>
-                    <tr>
-                        <th class="topic">Train Name</th>
-                        <th class="topic">Destination</th>
-                        <th class="topic">Frequency (min)</th>
-                        <th class="topic">Next Arrival</th>
-                        <th class="topic">Minutes Away</th>
-                    </tr>
-                </thead>
-            </table>
+
+            <div class="train-div">
+                <table class="table" id="cool-table" style="width:100%">
+                    <thead>
+                        <tr>
+                            <th class="topic">Train Name</th>
+                            <th class="topic">Destination</th>
+                            <th class="topic">Frequency (min)</th>
+                            <th class="topic">Next Arrival</th>
+                            <th class="topic">Minutes Away</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
 
-    <tbody>
-        </tbody>
+
 
     <div class="panel panel-default" id="add-new-train">
         <div class="panel-heading">
@@ -65,17 +73,23 @@
                 <input type="text" class="form-control" id="input-train-name" placeholder="" aria-describedby="basic-addon1">
             </div>
 
+            <br>
+
             <div class="input-group">
                 <p class="input-header">Destination</p>
                 <!-- <span class="input-group-addon" id="basic-addon1">Destination</span> -->
                 <input type="text" class="form-control" id="input-destination" placeholder="" aria-describedby="basic-addon1">
             </div>
 
+            <br>
+
             <div class="input-group">
                 <p class="input-header">Frequency</p>
                 <!-- <span class="input-group-addon" id="basic-addon1">Frequency</span> -->
                 <input type="text" class="form-control" id="input-frequency" placeholder="" aria-describedby="basic-addon1">
             </div>
+
+            <br>
 
             <div class="input-group">
                 <p class="input-header">First Train Time</p>

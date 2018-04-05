@@ -8,16 +8,11 @@ h1, #tagline {
 
 #schedule-panel {
     margin: 25px;
-    background-color: lightgray;
 }
 
-.topic {
-    background-color: red; 
-}
-
-/* tr {
+.panel-heading {
     width: 100%;
-} */
+}
 
 .panel-default {
     margin: 25px;
@@ -38,6 +33,3 @@ h1, #tagline {
     margin-bottom: 15px;
 }
 
-.panel-heading {
-    background-color: lightgreen;
-}
